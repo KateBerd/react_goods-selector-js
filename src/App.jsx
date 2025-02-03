@@ -51,7 +51,9 @@ export const App = () => {
                   key={good}
                   data-cy={good === value ? 'RemoveButton' : 'AddButton'}
                   type="button"
-                  className={good === value ? 'is-info' : 'button'}
+                  className={classNames('button', {
+                    'is-info': good === value,
+                  })}
                   onClick={() => {
                     if (good === value) {
                       setValue(null);
